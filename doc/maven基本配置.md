@@ -41,11 +41,11 @@ uploadArchives{
                 // 项目名称
                 artifactId = "wspeer"
                 // 唯一标识
-                groupId = "io.dcsgo.wspeer"
+                groupId = "lintlib"
                 // 生成类型
                 packaging = "aar"
                 // 描述
-                description = "wspeer"
+                description = "lintlib"
             }
         }
     }
