@@ -2,12 +2,11 @@
 android lint  自定义文档整理
 
 
-
+- [详细参考google官网地址](https://developer.android.google.cn/studio/write/lint?hl=zh_cn#commandline)
 
 - 配置Lint（方式1）：在项目的根目录创建lint.xml文件。格式如下：
 
 ```
-//详情配置查看：https://developer.android.google.cn/studio/write/lint?hl=zh_cn#commandline
 <?xml version="1.0" encoding="UTF-8"?>
 <lint>
         <!-- list of issues to configure -->
