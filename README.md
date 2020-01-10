@@ -59,4 +59,4 @@ Internationalization国际化。字符串缺少翻译等。
     ——build.gradle      //依赖lintjar
 ```
 
-- 自带ISSUE请看doc/文档.md
+- 自带ISSUE请看doc/文档.md，结合maven私服做成基类sdk，请配合：doc/maven基本配置.md
