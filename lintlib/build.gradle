@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    lintPublish project(':lintjar')
+}
+
+
+//配置maven
+uploadArchives{
+    repositories {
+        mavenDeployer {
+            // Ubuntu本地仓库路径， Windows 为(url:"file://D://***/***/***/")
+            repository(url:"file:/Users/Qincji/Desktop/")
+
+            pom.project {
+                // 版本号
+                version = "0.0.1-SNAPSHOT"
+                // 项目名称
+                artifactId = "lintlib"
+                // 唯一标识
+                groupId = "lintlib"
+                // 生成类型
+                packaging = "aar"
+                // 描述
+                description = "lintlib"
+            }
+        }
+    }
+}

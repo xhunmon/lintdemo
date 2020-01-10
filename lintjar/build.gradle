@@ -1,0 +1,18 @@
+apply plugin: 'java-library'
+
+dependencies {
+    // For a description of the below dependencies, see the main project README
+    compileOnly 'com.android.tools.lint:lint-api:26.5.3'
+    compileOnly 'com.android.tools.lint:lint-checks:26.5.3'
+}
+
+
+//添加注册
+jar {
+    manifest {
+        attributes 'Lint-Registry': 'lintjar.Register'
+    }
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"

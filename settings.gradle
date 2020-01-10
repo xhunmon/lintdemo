@@ -1,0 +1,2 @@
+include ':app', ':lintjar', ':lintlib'
+rootProject.name='LintSdk'
