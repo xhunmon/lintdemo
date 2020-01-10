@@ -33,7 +33,7 @@ uploadArchives{
     repositories {
         mavenDeployer {
              // Ubuntu本地仓库路径， Windows 为(url:"file://D://***/***/***/")
-            repository(url:"file:/Users/Qincji/Desktop/")
+            repository(url:"file:/Users/***/Desktop/")
 
             pom.project {
                 // 版本号
@@ -60,11 +60,11 @@ uploadArchives{
 ```
 // 添加到 root 的 build.gradle
 maven{
-    url 'file:/Users/Qincji/Desktop'
+    url 'file:/Users/***/Desktop'
 }
 
 // 添加到 app 的 build.gradle，注意名字规则和上面配置本地仓库之间的关联
-implementation 'io.dcsgo.wspeer:wspeer:0.0.1-SNAPSHOT'
+implementation 'lintlib:lintlib:0.0.1-SNAPSHOT'
 ```
 
 ### as私服maven配置
@@ -72,16 +72,16 @@ implementation 'io.dcsgo.wspeer:wspeer:0.0.1-SNAPSHOT'
 ```
 apply plugin: 'com.android.library'
 apply plugin: 'maven'
-def NEXUS_REPOSITORY_SNAPSHOTS = "http://112.94.31.55:9009/repository/maven-snapshots/"
-def NEXUS_REPOSITORY_RELEASES = "http://112.94.31.55:9009/repository/maven-releases/"
+def NEXUS_REPOSITORY_SNAPSHOTS = "http://***/repository/maven-snapshots/"
+def NEXUS_REPOSITORY_RELEASES = "http://***/repository/maven-releases/"
 
-def POM_GROUP_ID = "io.dcsgo.wspeer"
+def POM_GROUP_ID = "lintlib"
 def NEXUS_USERNAME = "admin"
-def NEXUS_PASSWORD = "www.cume.cc"
+def NEXUS_PASSWORD = "***"
 def POM_VERSION = "0.0.1-SNAPSHOT"
-def POM_ARTIFACT_ID = "wspeer"
+def POM_ARTIFACT_ID = "lintlib"
 def POM_PACKAGING = "aar"
-def POM_DESCRIPTION = "wspeer"
+def POM_DESCRIPTION = "lintlib"
 
 android {
    //省略
